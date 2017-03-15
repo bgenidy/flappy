@@ -112,6 +112,13 @@ var mainState = {
         this.labelScore = this.game.add.text(20, 20, this.score, {font: "10px Arial", fill: "#ffffff"});
 
         // Add the jump sound
+        /**
+         * Currently this feature doesn't work. Which is completely normal. There
+         * are many times where features in a project don't function as expected and
+         * it is the developers job to figure out why and create a fix. This is beyond
+         * the scope of this tutorial but is left to illustrate real world examples that
+         * occur during development life cycle.
+         */
         this.jumpSound = this.game.add.audio('jump');
     },
     update: function () {
