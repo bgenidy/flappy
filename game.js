@@ -74,6 +74,10 @@ var mainState = {
         this.pipes = game.add.group();
         this.pipes.enableBody = true;
         this.pipes.createMultiple(20, 'pipe');
+	/**
+	 * The timer event below is used to generate an event that goes off every 1500 miliseconds and that event generates the
+	 * new set of pipes.
+	 */
         this.timer = this.game.time.events.loop(1500, this.addRowOfPipes, this);
 
         this.bird = this.game.add.sprite(100, 245, 'bird');
@@ -202,8 +206,8 @@ var mainState = {
          * Updates the score by 1 and displays it on the text area.
          * Can you change the score value to update score by 5 ?
          */
+	this.labelScore.text = this.score;
         this.score += 1;
-        this.labelScore.text = this.score;
     },
 };
 
